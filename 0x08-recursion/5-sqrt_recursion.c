@@ -1,4 +1,6 @@
 #include"main.h"
+
+int calculate(int n, int j);
 /**
  * _sqrt_recursion - returns the natural square root of a number
  * @n: number to calculate the square root of
@@ -7,21 +9,35 @@
  */
 int _sqrt_recursion(int n)
 {
-	int x = 1;
-	int *p = &x;
-
-	if (x * x > n)
+	if (n < 0)
 	{
 		return (-1);
 	}
-	else if (x * x == n)
+	return (calculate(n, 1));
+}
+
+/**
+ * calculate - recurses to find the natural
+ * square root of a number
+ * @n: number to calculate the sqaure root of
+ * @j: iterator
+ *
+ * Return: the resulting square root
+ */
+int calculate(int n, int j)
+{
+	if (j * j > n)
 	{
-		return (x);
+		return (-1);
+	}
+	else if (j * j == n)
+	{
+		return (n);
 	}
 	else
 	{
-		*p = x++;
-		_sqrt_recursion(n);
-
+		return (calculate(n, (j + 1)));
 	}
+
 }
+
