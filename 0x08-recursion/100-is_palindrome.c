@@ -47,7 +47,7 @@ int str_lenght(char *j)
 
 int strcompare(char *i, int b, int len)
 {
-	if (*(i + b) != *(i + len))
+	if (*(i + b) != *(i + (len - 1)))
 	{
 		return (0);
 	}
