@@ -13,7 +13,7 @@ int is_palindrome(char *s)
 	{
 		return (1);
 	}
-	return (strcompare(s, 0, (str_lenght(s))));
+	return (strcompare(s, 0, str_lenght(s)));
 }
 
 /**
