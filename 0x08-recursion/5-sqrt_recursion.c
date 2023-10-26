@@ -33,7 +33,7 @@ int calculate(int n, int j)
 	}
 	else if (j * j == n)
 	{
-		return (n);
+		return (j);
 	}
 	else
 	{
@@ -41,4 +41,3 @@ int calculate(int n, int j)
 	}
 
 }
-
