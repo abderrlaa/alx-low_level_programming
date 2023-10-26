@@ -1,5 +1,8 @@
 #include"main.h"
 
+int str_lenght(char *j);
+int strcompare(char *i, int b, int len);
+
 /**
  * is_palindrome - checks if a string is a palindrome
  * @s: string to reverse
