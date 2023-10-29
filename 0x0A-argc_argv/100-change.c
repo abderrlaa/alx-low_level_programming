@@ -22,12 +22,12 @@ int main(int argc, char *argv[])
 	}
 	else if (atoi(argv[1]) <= 0)
 	{
-		printf("0");	
+		printf("0\n");
 	}
 	else
 	{
 		money = atoi(argv[1]);
-	
+
 		for (i = 0; i < 5; i++)
 		{
 
