@@ -10,23 +10,24 @@
 
 int main(int argc, char *argv[])
 {
+	int i = 0;
+	int cent[] = {25, 10, 5, 2, 1};
+	int change = 0;
+	int money;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	if (atoi(argv[1]) <= 0)
+	else if (atoi(argv[1]) <= 0)
 	{
-		printf("0\n");
+		printf("0");	
 	}
-
-	int i = 0;
-	int money = atoi(argv[1]);
-	int cent[] = {25, 10, 5, 2, 1};
-	int change = 0;
-
-
+	else
+	{
+		money = atoi(argv[1]);
+	
 		for (i = 0; i < 5; i++)
 		{
 
@@ -42,5 +43,5 @@ int main(int argc, char *argv[])
 
 		}
 		printf("%d\n", change);
-		return (0);
+	}
 }
