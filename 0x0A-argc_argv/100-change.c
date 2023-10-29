@@ -10,10 +10,6 @@
 
 int main(int argc, char *argv[])
 {
-	int i = 0;
-	int money = atoi(argv[1]);
-	int cent[] = {25, 10, 5, 2, 1};
-	int change = 0;
 
 	if (argc != 2)
 	{
@@ -24,6 +20,13 @@ int main(int argc, char *argv[])
 	{
 		printf("0\n");
 	}
+	
+	int i = 0;
+	int money = atoi(argv[1]);
+	int cent[] = {25, 10, 5, 2, 1};
+	int change = 0;
+
+	
 		for (i = 0; i < 5; i++)
 		{
 
