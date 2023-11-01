@@ -2,11 +2,17 @@
 
 /**
  * _abs - fuction that finds the absolute value of a number
- * @int: the number to work on
- * Return: int or -int
+ * @a: function parametere
+ * Return: a or -a
 */
 
-int _abs(int)
+int _abs(int a)
 {
-
+	if (a < 0)
+	{
+		return (a * -1);
+	}
+	else
+	return (a);
 }
+
