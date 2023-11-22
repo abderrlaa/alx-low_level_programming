@@ -39,8 +39,8 @@ int **alloc_grid(int width, int height)
 	}
 
 	array = malloc(sizeof(int *) * 2);
-	array[0] = array1;
-	array[1] = array2;
+	array[0] = array2;
+	array[1] = array1;
 
 	return (array);
 }
