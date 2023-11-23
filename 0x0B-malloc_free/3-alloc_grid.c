@@ -10,37 +10,30 @@
 int **alloc_grid(int width, int height)
 {
 	int **array;
-	int *array1, *array2;
-	int i;
+	int i, j;
 
 	if (width <= 0 || height <= 0)
 	{
 		return (NULL);
 	}
-
-	array1 = malloc(sizeof(int) * width);
-	if (array1 == NULL)
+	array = malloc(sizeof(int *) * height);
+	if (array == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < width; i++)
-	{
-		array1[i] = 0;
-	}
-
-	array2 = malloc(sizeof(int) * height);
-	if (array2 == NULL)
-	{
-		return (NULL);
-	}
+	
 	for (i = 0; i < height; i++)
 	{
-		array2[i] = 0;
+		array[i] = malloc(sizeof(int) * width);
+		if (array[i] == NULL)
+		{
+			return (NULL);
+		}
+		for (j = 0; j < width; j++)
+		{
+			array[i][j] = 0;
+		}
+		
 	}
-
-	array = malloc(sizeof(int *) * 2);
-	array[0] = array2;
-	array[1] = array1;
-
 	return (array);
 }
