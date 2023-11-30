@@ -1,4 +1,4 @@
-#include"main.h"
+#include "main.h"
 /**
  * string_nconcat - concatenates 2 srtings
  * @s1: pointer to the first string
@@ -9,7 +9,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *s;
-	int i, j, y, s1len = 0, s2len = 0;
+	int i, j, s1len = 0, s2len = 0;
 
 	if (s1 == NULL)
 	{
@@ -29,12 +29,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (n >= s2len)
 	{
-		y = s2len;
 		s = malloc(s1len + s2len + 1);
 	}
 	else
 	{
-		y = n;
 		s = malloc(s1len + n + 1);
 	}
 
@@ -42,10 +40,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s[i] = s1[i];
 	}
-	for (j = 0; j < y; j++)
+	for (j = 0; j < n; j++)
 	{
-		s[s1len + j] = s2[j];
+		s[i] = s2[j];
+		i++;
 	}
-	s[s1len + j] = '\0';
+	s[i] = '\0';
 	return (s);
 }
