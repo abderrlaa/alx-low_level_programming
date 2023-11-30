@@ -1,5 +1,4 @@
 #include"main.h"
-
 /**
  * string_nconcat - concatenates 2 srtings
  * @s1: pointer to the first string
@@ -7,11 +6,10 @@
  * @n: number of bytes to copy from the second string
  * Return: pointer shall point to a newly allocated space in memory
 */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *s;
-	int i, j, s1len = 0, s2len = 0;
+	int i, j, y, s1len = 0, s2len = 0;
 
 	if (s1 == NULL)
 	{
@@ -21,47 +19,33 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s2 = "";
 	}
-
-	for (i = 0; s1[i] != '\0'; i++)
+	for (s1len = 0; s1[s1len] != '\0'; s1len++)
 	{
-		s1len++;
+		;
 	}
-	for (i = 0; s2[i] != '\0'; i++)
+	for (s2len = 0; s2[s2len] != '\0'; s2len++)
 	{
-		s2len++;
+		;
 	}
 	if (n >= s2len)
 	{
+		y = s2len;
 		s = malloc(s1len + s2len + 1);
 	}
 	else
-	s = malloc(n + s1len + 1);
-	if (s == NULL)
 	{
-		return (NULL);
+		y = n;
+		s = malloc(s1len + n + 1);
 	}
-	
 
 	for (i = 0; s1[i] != '\0'; i++)
 	{
 		s[i] = s1[i];
 	}
-	if (n < s2len)
+	for (j = 0; j < y; j++)
 	{
-		for (j = 0; j < n; j++)
-		{
-			s[s1len + j] = s2[j];
-		}
+		s[s1len + j] = s2[j];
 	}
-	else if (n >= s2len)
-	{
-		for (j = 0; s2[j] != '\0'; j++)
-		{
-			s[s1len + j] = s2[j];
-		}
-		
-	}
-	
 	s[s1len + j] = '\0';
 	return (s);
 }
