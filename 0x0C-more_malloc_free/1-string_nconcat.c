@@ -13,11 +13,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (s1 == NULL)
 	{
-		s1 = "";
+		s1len = 0;
 	}
 	if (s2 == NULL)
 	{
-		s2 = "";
+		s2len = 0;
 	}
 	for (i = 0; s1[i] != '\0'; i++)
 	{
